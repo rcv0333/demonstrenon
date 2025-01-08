@@ -1,0 +1,18 @@
+name: Demonstração CI
+
+on:
+  push:
+    branches: [ main, feature/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Demonstração de Pipeline
+      run: |
+        echo "Executando testes..."
+        echo "Verificando código..."
+        echo "Gerando relatórios..."
